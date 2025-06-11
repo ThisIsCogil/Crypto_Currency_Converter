@@ -77,9 +77,3 @@ memberikan hasil konversi yang akurat dan up-to-date.
 ## 🧑‍💻 Kontribusi
 
 Kontribusi sangat diterima! Silakan buat issue atau pull request untuk peningkatan, bugfix, atau penambahan fitur baru.
-
----
-
-## 📄 Lisensi
-
-MIT License © 2025 \[ThisIsCogil]
