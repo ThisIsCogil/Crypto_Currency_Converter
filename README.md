@@ -30,31 +30,6 @@ memberikan hasil konversi yang akurat dan up-to-date.
 
 ---
 
-## 🚀 Cara Menggunakan
-
-1. Clone atau download repositori ini:
-
-   ```bash
-   git clone https://github.com/username/cryptoconverter.git
-   cd cryptoconverter
-   ```
-
-2. Buka file `index.html` di browser:
-
-   ```bash
-   open index.html
-   ```
-
-3. Masukkan jumlah dan pilih mata uang yang ingin dikonversi.
-
----
-
-## 📸 Tampilan
-
-> *(Tambahkan tangkapan layar di sini jika ada)*
-
----
-
 ## 📦 Struktur File
 
 ```
