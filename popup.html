@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="crypto-icon">₿</div>
+                <h1>CRYPTO CONVERTER</h1>
+            </div>
+            <div class="status-indicator" id="status">
+                <div class="pulse"></div>
+                <span>LIVE</span>
+            </div>
+        </div>
+
+        <div class="converter-section">
+            <div class="input-group from-group">
+                <label>FROM</label>
+                <div class="input-container">
+                    <input type="number" id="fromAmount" placeholder="0.00" step="any">
+                    <select id="fromCurrency" class="fiat-select">
+                        <optgroup label="💰 Fiat Currencies">
+                            <option value="USD" data-type="fiat">USD - US Dollar</option>
+                            <option value="EUR" data-type="fiat">EUR - Euro</option>
+                            <option value="GBP" data-type="fiat">GBP - British Pound</option>
+                            <option value="JPY" data-type="fiat">JPY - Japanese Yen</option>
+                            <option value="IDR" data-type="fiat">IDR - Indonesian Rupiah</option>
+                        </optgroup>
+                        <optgroup label="🚀 Cryptocurrencies">
+                            <option value="BTC" data-type="crypto">BTC - Bitcoin</option>
+                            <option value="ETH" data-type="crypto">ETH - Ethereum</option>
+                            <option value="BNB" data-type="crypto">BNB - Binance Coin</option>
+                            <option value="ADA" data-type="crypto">ADA - Cardano</option>
+                            <option value="SOL" data-type="crypto">SOL - Solana</option>
+                            <option value="DOT" data-type="crypto">DOT - Polkadot</option>
+                            <option value="MATIC" data-type="crypto">MATIC - Polygon</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+
+            <div class="swap-button-container">
+                <button class="swap-btn" id="swapBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="input-group to-group">
+                <label>TO</label>
+                <div class="input-container">
+                    <input type="number" id="toAmount" placeholder="0.00" readonly>
+                    <select id="toCurrency" class="crypto-select">
+                        <optgroup label="🚀 Cryptocurrencies">
+                            <option value="BTC" data-type="crypto">BTC - Bitcoin</option>
+                            <option value="ETH" data-type="crypto">ETH - Ethereum</option>
+                            <option value="BNB" data-type="crypto">BNB - Binance Coin</option>
+                            <option value="ADA" data-type="crypto">ADA - Cardano</option>
+                            <option value="SOL" data-type="crypto">SOL - Solana</option>
+                            <option value="DOT" data-type="crypto">DOT - Polkadot</option>
+                            <option value="MATIC" data-type="crypto">MATIC - Polygon</option>
+                        </optgroup>
+                        <optgroup label="💰 Fiat Currencies">
+                            <option value="USD" data-type="fiat">USD - US Dollar</option>
+                            <option value="EUR" data-type="fiat">EUR - Euro</option>
+                            <option value="GBP" data-type="fiat">GBP - British Pound</option>
+                            <option value="JPY" data-type="fiat">JPY - Japanese Yen</option>
+                            <option value="IDR" data-type="fiat">IDR - Indonesian Rupiah</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="rate-info">
+            <div class="rate-display" id="rateDisplay">
+                <span class="rate-text">1 USD = 0.00002 BTC</span>
+                <div class="loading-spinner" id="loadingSpinner"></div>
+            </div>
+            <div class="last-updated" id="lastUpdated">
+                Last updated: --:--:--
+            </div>
+        </div>
+
+        <div class="crypto-grid">
+            <div class="crypto-card" data-crypto="BTC">
+                <div class="crypto-symbol">₿</div>
+                <div class="crypto-info">
+                    <span class="crypto-name">Bitcoin</span>
+                    <span class="crypto-price" id="btc-price">$67,234.56</span>
+                </div>
+                <div class="crypto-change positive" id="btc-change">+2.45%</div>
+            </div>
+
+            <div class="crypto-card" data-crypto="ETH">
+                <div class="crypto-symbol">Ξ</div>
+                <div class="crypto-info">
+                    <span class="crypto-name">Ethereum</span>
+                    <span class="crypto-price" id="eth-price">$3,456.78</span>
+                </div>
+                <div class="crypto-change positive" id="eth-change">+1.23%</div>
+            </div>
+
+            <div class="crypto-card" data-crypto="BNB">
+                <div class="crypto-symbol">◆</div>
+                <div class="crypto-info">
+                    <span class="crypto-name">Binance Coin</span>
+                    <span class="crypto-price" id="bnb-price">$634.21</span>
+                </div>
+                <div class="crypto-change negative" id="bnb-change">-0.89%</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="network-status">
+                <div class="network-dot"></div>
+                <span>Real-time data powered by CoinGecko</span>
+                <span>adam</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
